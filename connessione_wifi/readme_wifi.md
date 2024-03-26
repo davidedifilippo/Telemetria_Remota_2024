@@ -24,6 +24,11 @@ Creo un oggetto di tipo WiFiClient che rappresenti il mio modulo WiFI:
 
 ### Fase di SETUP
 
+Si stampano informazioni di debug del codice:
+
+          Serial.print("Tentativo di connessione all'SSID: ");
+          Serial.println(ssid);
+
 Si prova a far connettere il modulo WiFi del raspberry con il router:
 
      while (WiFi.begin(ssid, pass) != WL_CONNECTED) {
