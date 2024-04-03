@@ -62,6 +62,10 @@ Inizializzo la porta seriale e aspetto che sia pronta:
 
   Testo la connessione con il sensore di temperatura:
 
+  Wire1.setSDA(14);
+  Wire1.setSCL(15);
+  Wire1.begin();
+
      /*It will return true on success or false on failure to communicate. */
     if(!tmpSensor.begin(0x48,Wire1))
     { 
