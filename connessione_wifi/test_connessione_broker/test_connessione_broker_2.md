@@ -66,9 +66,7 @@ Inizializzo la porta seriale e aspetto che sia pronta:
     if(!tmpSensor.begin(0x48,Wire1))
     { 
        Serial.print("Cannot connect " );
-       Serial.setCursor(0,1);
-       Serial.lcd.print("to tmp102 sensor!");
-       Serial.lcd.setCursor(0,2);
+       Serial.print("to tmp102 sensor!");
        Serial.print("Stop");
        while(1);
     }
