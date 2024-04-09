@@ -19,7 +19,7 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
 
 const char broker[] = "broker.hivemq.com";
 int        port     = 1883;
-const char topic[]  = "arduino/simple";
+const char topic[]  = "lorenzo_pale/lab20_tx";
 
 const long interval = 10000;
 unsigned long previousMillis = 0;
@@ -125,7 +125,8 @@ void loop() {
     lcd.print(temp);
     mqttClient.beginMessage(topic);
     //mqttClient.print("weather,location=us-midwest temperature=82 1465839830100400200"); //dataformat influx in telegraf
-    mqttClient.print("misure,location=camera temperature="); //dataformat senza timestamp
+    mqttClient.print("misure,location=lab20_tx temperatura="); //dataformat senza timestamp
+
     mqttClient.print(temp);
     mqttClient.endMessage();
 
